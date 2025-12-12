@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve, relative, extname } from 'path'
 import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts';
-import tailwindcss from "tailwindcss";
+import tailwindcss from '@tailwindcss/vite'
 import { glob } from "glob"
 import { fileURLToPath } from 'node:url'
 
@@ -10,7 +10,8 @@ import { fileURLToPath } from 'node:url'
 export default defineConfig({
   plugins: [
     react({ 'jsxRuntime': 'classic' }),
-    dts({ include: ['src'], })
+    dts({ include: ['src'], }),
+    tailwindcss(),
   ],
   resolve: {
     alias: {
@@ -39,10 +40,5 @@ export default defineConfig({
       )
     },
     target: 'esnext',
-  },
-  css: {
-    postcss: {
-      plugins: [tailwindcss]
-    }
   }
 })
