@@ -1,5 +1,5 @@
 {
-  "name": "daxy-ui",
+  "name": "tairo-ui",
   "version": "0.1.0",
   "description": "A lightweight React UI library built with Tailwind CSS to accelerate UI development.",
   "type": "module",
